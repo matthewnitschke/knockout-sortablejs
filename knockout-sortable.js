@@ -163,8 +163,9 @@
                 ko.tasks.runEarly();
 
                 // Insert the item on its new position
-								var copied = ko.mapping.fromJS(ko.mapping.toJS(itemVM)); // make a deep clone of itemVM
-                to().splice(newIndex, 0, copied);
+		var copied = ko.mapping.fromJS(ko.mapping.toJS(itemVM)); // make a deep clone of itemVM
+                
+		to().splice(newIndex, 0, copied);
                 // Make sure to tell knockout that we've modified the actual array.
                 to.valueHasMutated();
             };
